@@ -1,6 +1,7 @@
 package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import models.*;
 import play.libs.Json;
 import play.mvc.*;
 
@@ -29,6 +30,13 @@ public class HomeController extends Controller {
 
     public Result postTest() {
         JsonNode jsonNode = Json.toJson(new AppSummary("Post Request Test => Data Sending Success"));
+        return ok(jsonNode).as("application/json");
+    }
+
+    public Result showProduct(String productId){
+//        Product product=Product.findProduct.byId(productId);
+//        return ok(Json.toJson(product.getCategory()));
+        JsonNode jsonNode = Json.toJson(new AppSummary("shit"));
         return ok(jsonNode).as("application/json");
     }
 }

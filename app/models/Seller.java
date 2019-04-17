@@ -10,6 +10,9 @@ import java.util.List;
 public class Seller extends Model {
 
     @Id
+    @Column(name = "promoterId")
+    private String Id;
+
     @Column(name = "name")
     private String name;
 
@@ -18,6 +21,15 @@ public class Seller extends Model {
 
 //    @ManyToMany
 //    private List<BookM> books;
+
+
+    public String getId() {
+        return Id;
+    }
+
+    public void setId(String id) {
+        Id = id;
+    }
 
     public String getName() {
         return name;

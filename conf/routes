@@ -13,3 +13,5 @@ GET     /*file                      controllers.FrontendController.assetOrDefaul
 
 # Test post request
 POST    /api/postTest               controllers.HomeController.postTest()
+
+GET     /product/:id                controllers.HomeController.showProduct(id: String)

@@ -9,6 +9,7 @@ import { RouteExampleComponent } from './route-example/route-example.component';
 import { AppService } from './app.service';
 import { AppHttpInterceptorService } from './http-interceptor.service';
 import { LoginComponent } from './login/login.component';
+import { ProductComponent } from './product/product.component';
 
 const routes: Routes = [
   {
@@ -26,18 +27,24 @@ const routes: Routes = [
     component: RouteExampleComponent,
     data: { technology: 'Angular' }
   },
+  // {
+  //   path: '**',
+  //   redirectTo: '/play',
+  //   pathMatch: 'full'
+  // },
   {
-    path: '**',
-    redirectTo: '/play',
-    pathMatch: 'full'
+    path: 'product/:id',
+    component: ProductComponent
   }
+
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     RouteExampleComponent,
-    LoginComponent
+    LoginComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
